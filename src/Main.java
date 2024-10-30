@@ -5,6 +5,7 @@ public class Main {
         //LECTURA DE DATOS
         int opcion=0;
         Scanner entrada=new Scanner(System.in);
+        CurrencyConverter converter = new CurrencyConverter();
 
         while(opcion!=7){
 
@@ -24,25 +25,31 @@ public class Main {
 
             switch (opcion){
                 case 1:
-                    System.out.println("opc1");
+                    double rate1 = converter.convert("USD", "ARS");
+                    System.out.println("Tasa de cambio de USD a ARS: " + rate1);
                     break;
                 case 2:
-                    System.out.println("opc2");
+                    double rate2 = converter.convert("ARS", "USD");
+                    System.out.println("Tasa de cambio de ARS a USD: " + rate2);
                     break;
                 case 3:
-                    System.out.println("opc3");
+                    double rate3 = converter.convert("USD", "BRL");
+                    System.out.println("Tasa de cambio de USD a BRL: " + rate3);
                     break;
                 case 4:
-                    System.out.println("opc4");
+                    double rate4 = converter.convert("BRL", "USD");
+                    System.out.println("Tasa de cambio de BRL a USD: " + rate4);
                     break;
                 case 5:
-                    System.out.println("opc5");
+                    double rate5 = converter.convert("USD", "COP");
+                    System.out.println("Tasa de cambio de USD a COP: " + rate5);
                     break;
                 case 6:
-                    System.out.println("opc6");
+                    double rate6 = converter.convert("COP", "USD");
+                    System.out.println("Tasa de cambio de COP a USD: " + rate6);
                     break;
                 case 7:
-                    System.out.println("opc7");
+                    System.out.println("Saliendo");
                     break;
                 default:
                     System.out.println("Opción inválida...");
